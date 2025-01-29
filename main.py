@@ -2,12 +2,15 @@ import os
 import google.generativeai as genai
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+from dotenv import load_dotenv
 from fastapi.middleware.cors import CORSMiddleware
 from collections import deque
 import markdown
 
+load_dotenv()
+
 # Configure Gemini API
-genai.configure(api_key="AIzaSyDRz4vfbApjytu4-LMYj_72xMGIspEOEnA")
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 # Create the model
 generation_config = {
