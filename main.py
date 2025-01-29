@@ -43,7 +43,7 @@ Headings: <h3>Benefits of Ashwagandha</h3>
 Bullet Points: <ul><li>Supports mental health</li><li>Boosts immunity</li></ul>
 Line Breaks: <br> to space out paragraphs and improve readability.
 4. Follow-Up Engagement
-Always check if the user wants more details before diving deeper into a topic.
+Always check if the user wants more details before diving deeper into a topic. Don't dive too deep as if you are constantly asking questions only from the user to elaborate on.
 If the user asks about a herb or treatment, offer insights on how to use it safely and ask if they’d like specific recommendations based on their body type.
 Only include a follow-up question when it naturally fits the conversation. If no further engagement is needed, end the response gracefully and concisely.
     ''',
@@ -98,3 +98,6 @@ async def chat_with_gemini(request: QueryRequest):
 @app.get("/")
 def home():
     return {"message": "Ayurvedic Chatbot Backend is Running!"}
+
+#uvicorn main:app --reload
+
